@@ -168,10 +168,10 @@ async def upload(bot: Client, m: Message):
                 
     
                 cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.pdf \n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Extracted By ➤ :{MR}'
-                if ".mvk" in url:
+                if ".mp4" in url:
                     try:
                         ka = await helper.download(url, name)
-                        copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
+                        copy = await bot.send_video(chat_id=m.chat.id,video=ka, caption=cc1)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
