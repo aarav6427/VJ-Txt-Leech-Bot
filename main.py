@@ -171,8 +171,15 @@ async def upload(bot: Client, m: Message):
                 if ".mp4" in url:
                     try:
                         ka = await helper.download(url, name)
-                        copy = await bot.send_video(chat_id=m.chat.id,video=ka, caption=cc1)
-                        count+=1
+                        
+                        await bot.send_video(
+                chat_id=update.chat.id,
+                video=ka,
+                caption=description,
+                duration=duration,
+                width=width,
+                height=height
+                        
                         os.remove(ka)
                         time.sleep(1)
                     except FloodWait as e:
