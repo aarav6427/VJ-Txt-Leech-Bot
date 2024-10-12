@@ -168,7 +168,7 @@ async def upload(bot: Client, m: Message):
                 
     
                 cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.pdf \n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Extracted By ➤ :{MR}'
-                if "drive" in url:
+                if ".mvk" in url:
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
