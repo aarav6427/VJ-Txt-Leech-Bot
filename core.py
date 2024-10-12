@@ -173,8 +173,8 @@ async def download_video(url,cmd, name):
             return f"{name}.mkv"
         elif os.path.isfile(f"{name}.mp4"):
             return f"{name}.mp4"
-        elif os.path.isfile(f"{name}.mp4.webm"):
-            return f"{name}.mp4.webm"
+        elif os.path.isfile(f"{name}.mp4"):
+            return f"{name}.mp4"
 
         return name
     except FileNotFoundError as exc:
