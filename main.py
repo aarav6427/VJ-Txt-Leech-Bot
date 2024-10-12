@@ -178,7 +178,8 @@ async def upload(bot: Client, m: Message):
                 caption=description,
                 duration=duration,
                 width=width,
-                height=height
+                height=height,
+                        )
                         
                         os.remove(ka)
                         time.sleep(1)
