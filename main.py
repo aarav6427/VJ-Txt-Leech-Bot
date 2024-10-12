@@ -1,6 +1,4 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 import os
 import re
@@ -35,19 +33,19 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /upload Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
+    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /run Command And Then Follow Few Steps..\n Extracted By ➤ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼 \n\nUse /stop to stop any ongoing task.</b>")
 
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**Stopped**🚦", True)
+    await m.reply_text("**Stopped\ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["upload"]))
+@bot.on_message(filters.command(["run"]))
 async def upload(bot: Client, m: Message):
-    editable = await m.reply_text('𝕤ᴇɴᴅ ᴛxᴛ ғɪʟᴇ ⚡️')
+    editable = await m.reply_text('𝕤ᴇɴᴅ ᴛxᴛ ғɪʟᴇ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼 ⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -104,7 +102,7 @@ async def upload(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("Extracted By ➤ ")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -166,10 +164,10 @@ async def upload(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n**Downloaded By :{MR}'
+                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Extracted By ➤ :{MR}'
                 
     
-                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Downloaded By :{MR}'
+                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)} {𝗻𝗮𝗺𝗲𝟭}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}\n\n** Extracted By ➤ :{MR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -195,7 +193,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}` Extracted By ➤ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -212,7 +210,7 @@ async def upload(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**𝔻ᴏɴᴇ 𝔹ᴏ𝕤𝕤😎**")
+    await m.reply_text("**𝔻ᴏɴᴇ 𝔹ᴏ𝕤𝕤😎/ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼**")
 
 
 bot.run()
