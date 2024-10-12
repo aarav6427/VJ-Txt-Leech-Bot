@@ -166,9 +166,10 @@ async def upload(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:  
-                cc = f'**[🎥] Video_ID : {str(count).zfill(3)}.**\n\n**𝑽𝒊𝒅𝒆𝒐 𝑵𝒂𝒎𝒆** : **{name1}** - ({res}) {name_before_extention}.mkv\n\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : {raw_text0}\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {MR}**'
-                cc1 = f'**[📁] File_ID : {str(count).zfill(3)}.**\n\n**𝑭𝒊𝒍𝒆 𝑵𝒂𝒎𝒆** : **{name1}** - {name_before_extention}.pdf\n\n**𝑩𝒂𝒕𝒄𝒉 𝑵𝒂𝒎𝒆** : {raw_text0}\n\n**𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑩𝒚 : {MR}**'
+                ccc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**' {𝗻𝗮𝗺𝗲𝟭}{MR}
+                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**' {𝗻𝗮𝗺𝗲𝟭}{MR}
                 if "drive" in url:
+                    try:
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_vid(chat_id=m.chat.id,vid=ka, caption=cc1)
