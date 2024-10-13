@@ -38,7 +38,7 @@ async def start(bot: Client, m: Message):
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**Stopped\ 🅹🅰🅸 🆂🅷🆁🅸 🆁🅰🅼**🚦", True)
+    await m.reply_text("**Stopped Boss **🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
