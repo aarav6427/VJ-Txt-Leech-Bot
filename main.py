@@ -102,7 +102,7 @@ async def upload(bot: Client, m: Message):
     
     
 
-    await editable.edit("Extracted By ➤ 🏴‍☠️ W A C K Y 🏴‍☠️ ")
+    await editable.edit("Extracted By ➤ 🏴‍☠️ 🏴‍☠️ ")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -245,7 +245,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}` \n\n Extracted By ➤ 🏴‍☠️ W A C K Y 🏴‍☠️"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}` \n\n Extracted By ➤ 🏴‍☠️ 🏴‍☠"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
