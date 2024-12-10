@@ -196,10 +196,7 @@ async def upload(bot: Client, m: Message):
             else:
                 ytf = f"b[height<={resolution}]/bv[height<={resolution}]+ba/b/bv+ba"
 
-    ydl_opts = {
-        'format': ytf,
-        'outtmpl': '%(title)s.%(ext)s',
-    }
+   
 
             if "jw-prod" in url:
                 cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
